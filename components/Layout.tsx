@@ -1,5 +1,6 @@
-import { ReactNode } from "react";
-import Head from "next/head";
+import { ReactNode } from 'react';
+import Head from 'next/head';
+import Navbar from './Navbar';
 
 interface Props {
   children: ReactNode;
@@ -12,6 +13,9 @@ export default function Layout({ children, home }: Props) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <header>
+        <Navbar />
+      </header>
       {children}
     </div>
   );
